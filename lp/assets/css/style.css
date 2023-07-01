@@ -505,23 +505,28 @@ figure {
 .Header__rightContent {
   align-items: center;
   display: flex;
+  justify-content: start;
+  position: relative;
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .Header__rightContent {
-    gap: 24px;
+    gap: 8px;
+    height: 48px;
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .Header__rightContent {
-    gap: 40px;
+    gap: 8px;
+    height: 64px;
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .Header__rightContent {
-    gap: 40px;
+    gap: 8px;
+    height: 64px;
   }
 }
 
@@ -613,140 +618,497 @@ figure {
     width: 10px;
   }
 }
-
-/* 共通 */
-.Header__buttonHamburger {
-}
-/* スマホのみ */
-@media only screen and (max-width: 767px) {
-  .Header__buttonHamburger {
-  }
-}
-/* タブレットのみ */
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
-  .Header__buttonHamburger {
-  }
-}
-/* PCのみ */
-@media only screen and (min-width: 1101px) {
-  .Header__buttonHamburger {
-  }
-}
-
-/* 共通 */
-.Header__buttonHamburgerIcon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-/* スマホのみ */
-@media only screen and (max-width: 767px) {
-  .Header__buttonHamburgerIcon {
-    height: 16px;
-  }
-}
-/* タブレットのみ */
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
-  .Header__buttonHamburgerIcon {
-    height: 16px;
-  }
-}
-/* PCのみ */
-@media only screen and (min-width: 1101px) {
-  .Header__buttonHamburgerIcon {
-    height: 16px;
-  }
-}
-
-/* 共通 */
-.Header__buttonHamburgerIconLine {
-  background-color: var(--c-primary-hamburger);
-}
-/* スマホのみ */
-@media only screen and (max-width: 767px) {
-  .Header__buttonHamburgerIconLine {
-    height: 1px;
-  }
-}
-/* タブレットのみ */
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
-  .Header__buttonHamburgerIconLine {
-    height: 1px;
-  }
-}
-/* PCのみ */
-@media only screen and (min-width: 1101px) {
-  .Header__buttonHamburgerIconLine {
-    height: 1px;
-  }
-}
-
-/* 共通 */
-.Header__buttonHamburgerIconLine:nth-of-type(1) {
-}
-/* スマホのみ */
-@media only screen and (max-width: 767px) {
-  .Header__buttonHamburgerIconLine:nth-of-type(1) {
-    width: 16px;
-  }
-}
-/* タブレットのみ */
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
-  .Header__buttonHamburgerIconLine:nth-of-type(1) {
-    width: 16px;
-  }
-}
-/* PCのみ */
-@media only screen and (min-width: 1101px) {
-  .Header__buttonHamburgerIconLine:nth-of-type(1) {
-    width: 16px;
-  }
-}
-
-/* 共通 */
-.Header__buttonHamburgerIconLine:nth-of-type(2) {
-}
-/* スマホのみ */
-@media only screen and (max-width: 767px) {
-  .Header__buttonHamburgerIconLine:nth-of-type(2) {
-    width: 16px;
-  }
-}
-/* タブレットのみ */
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
-  .Header__buttonHamburgerIconLine:nth-of-type(2) {
-    width: 16px;
-  }
-}
-/* PCのみ */
-@media only screen and (min-width: 1101px) {
-  .Header__buttonHamburgerIconLine:nth-of-type(2) {
-    width: 16px;
-  }
-}
-
-/* 共通 */
-.Header__buttonHamburgerIconLine:nth-of-type(3) {
-}
-/* スマホのみ */
-@media only screen and (max-width: 767px) {
-  .Header__buttonHamburgerIconLine:nth-of-type(3) {
-    width: 12px;
-  }
-}
-/* タブレットのみ */
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
-  .Header__buttonHamburgerIconLine:nth-of-type(3) {
-    width: 12px;
-  }
-}
-/* PCのみ */
-@media only screen and (min-width: 1101px) {
-  .Header__buttonHamburgerIconLine:nth-of-type(3) {
-    width: 12px;
-  }
-}
 /* ----------▲▲ Header ▲▲---------- */
+
+
+/* ----------▼▼ GNav ▼▼---------- */
+/* 共通 */
+.GNav {
+  position: relative;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav {
+    height: 48px;
+    width: 48px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav {
+    height: 64px;
+    width: 64px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav {
+    height: 64px;
+    width: 64px;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger {
+  align-items: center;
+  background-color: var(--c-ghost);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger {
+    height: 48px;
+    right: 0;
+    top: 0;
+    width: 48px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger {
+    height: 64px;
+    right: 0;
+    top: 0;
+    width: 64px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger {
+    height: 64px;
+    right: 0;
+    top: 0;
+    width: 64px;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburgerIcon {
+  position: relative;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburgerIcon {
+    height: 16px;
+    width: 16px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburgerIcon {
+    height: 16px;
+    width: 16px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburgerIcon {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburgerIconLine {
+  background-color: var(--c-primary-hamburger);
+  position: absolute;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburgerIconLine {
+    height: 1px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburgerIconLine {
+    height: 1px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburgerIconLine {
+    height: 1px;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburgerIconLine:nth-of-type(1) {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburgerIconLine:nth-of-type(1) {
+    width: 100%;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburgerIconLine:nth-of-type(1) {
+    width: 100%;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburgerIconLine:nth-of-type(1) {
+    width: 100%;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburgerIconLine:nth-of-type(2) {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburgerIconLine:nth-of-type(2) {
+    width: 100%;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburgerIconLine:nth-of-type(2) {
+    width: 100%;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburgerIconLine:nth-of-type(2) {
+    width: 100%;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburgerIconLine:nth-of-type(3) {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburgerIconLine:nth-of-type(3) {
+    width: calc(100% - 4px);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburgerIconLine:nth-of-type(3) {
+    width: calc(100% - 4px);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburgerIconLine:nth-of-type(3) {
+    width: calc(100% - 4px);
+  }
+}
+
+/* TODO: ハンバーガーメニューの実装 */
+
+/* 共通 */
+.GNav__content {
+  background-color: var(--c-white);
+  opacity: 0;
+  position: absolute;
+  transition: opacity .4s ease, visibility .4s ease;
+  visibility: hidden;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__content {
+    right: 0;
+    top: 48px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__content {
+    right: 0;
+    top: 64px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__content {
+    right: 0;
+    top: 64px;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger.is-open + .GNav__content {
+  opacity: 1;
+  visibility: visible
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger.is-open + .GNav__content {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger.is-open + .GNav__content {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger.is-open + .GNav__content {
+  }
+}
+/* ----------▲▲ GNav ▲▲---------- */
+
+
+/* ----------▼▼ GNav (animation) ▼▼---------- */
+/* 共通 */
+.GNav__buttonHamburger {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger {
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger .GNav__buttonHamburgerIconLine {
+  transition: transform .3s;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger .GNav__buttonHamburgerIconLine {
+    left: 0;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger .GNav__buttonHamburgerIconLine {
+    left: 0;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger .GNav__buttonHamburgerIconLine {
+    left: 0;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger.is-close {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger.is-close {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger.is-close {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger.is-close {
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine {
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(1) {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(1) {
+    top: 0;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(1) {
+    top: 0;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(1) {
+    top: 0;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(2) {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(2) {
+    top: calc(50% - calc(1px / 2));
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(2) {
+    top: calc(50% - calc(1px / 2));
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(2) {
+    top: calc(50% - calc(1px / 2));
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(3) {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(3) {
+    bottom: 0;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(3) {
+    bottom: 0;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger.is-close .GNav__buttonHamburgerIconLine:nth-of-type(3) {
+    bottom: 0;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger.is-open {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger.is-open {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger.is-open {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger.is-open {
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine {
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(1) {
+  transform: rotate(315deg);
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(1) {
+    top: calc(50% - calc(1px / 2));
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(1) {
+    top: calc(50% - calc(1px / 2));
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(1) {
+    top: calc(50% - calc(1px / 2));
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(2) {
+  width: 0;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(2) {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(2) {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(2) {
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(3) {
+  transform: rotate(-315deg);
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(3) {
+    top: calc(50% - calc(1px / 2));
+    width: 16px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(3) {
+    top: calc(50% - calc(1px / 2));
+    width: 16px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger.is-open .GNav__buttonHamburgerIconLine:nth-of-type(3) {
+    top: calc(50% - calc(1px / 2));
+    width: 16px;
+  }
+}
+/* ----------▲▲ GNav (animation) ▲▲---------- */
 
 
 /* ----------▼▼ Main ▼▼---------- */
