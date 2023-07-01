@@ -192,9 +192,11 @@ body {
   line-break: strict;
   margin: 0;
   overflow-wrap: break-word;
+  overflow-x: hidden;
   overscroll-behavior-y: none;
   position: relative;
   text-align: left;
+  width: 100vw;
   word-wrap: break-word;
 }
 
@@ -3034,16 +3036,19 @@ figure {
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .Point {
+    padding: 0 0 40px;
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .Point {
+    padding: 0 0 96px;
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .Point {
+    padding: 0 0 96px;
   }
 }
 
@@ -3186,8 +3191,31 @@ figure {
 }
 
 /* 共通 */
+.Point__featureList .slick-list .slick-track {
+  overflow: visible;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Point__featureList .slick-list .slick-track {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Point__featureList .slick-list .slick-track {
+    width: 4000px !important;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Point__featureList .slick-list .slick-track {
+    width: 4000px !important;
+  }
+}
+
+/* 共通 */
 .slick-arrow {
   position: relative;
+  transition: all .3s;
   z-index: 1;
 }
 /* スマホのみ */
@@ -3365,6 +3393,48 @@ figure {
 }
 
 /* 共通 */
+.Point__featureList:has(.slick-slide:first-of-type.slick-current) .slick-prev {
+  opacity: 0;
+  visibility: hidden;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Point__featureList:has(.slick-slide:first-of-type.slick-current) .slick-prev {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Point__featureList:has(.slick-slide:first-of-type.slick-current) .slick-prev {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Point__featureList:has(.slick-slide:first-of-type.slick-current) .slick-prev {
+  }
+}
+
+/* 共通 */
+.Point__featureList:has(.slick-slide:last-of-type.slick-current) .slick-next {
+  opacity: 0;
+  visibility: hidden;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Point__featureList:has(.slick-slide:last-of-type.slick-current) .slick-next {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Point__featureList:has(.slick-slide:last-of-type.slick-current) .slick-next {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Point__featureList:has(.slick-slide:last-of-type.slick-current) .slick-next {
+  }
+}
+
+/* 共通 */
 .slick-dots {
   text-align: right !important;
 }
@@ -3372,21 +3442,21 @@ figure {
 @media only screen and (max-width: 767px) {
   .slick-dots {
     right: 0;
-    top: -24px;
+    top: -32px;
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .slick-dots {
     right: 0;
-    top: -48px;
+    top: -136px;
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .slick-dots {
     right: 0;
-    top: -48px;
+    top: -136px;
   }
 }
 
@@ -3567,6 +3637,7 @@ figure {
   .Point__featureListItem {
     height: 436px !important;
     padding: 0 16px;
+    width: 980px !important;
   }
 }
 /* PCのみ */
@@ -3574,6 +3645,7 @@ figure {
   .Point__featureListItem {
     height: 436px !important;
     padding: 0 16px;
+    width: 980px !important;
   }
 }
 
@@ -3611,28 +3683,8 @@ figure {
 }
 
 /* 共通 */
-.Point__featureListItem:nth-of-type(3n-3)::before {
-  content: "01";
-}
-/* スマホのみ */
-@media only screen and (max-width: 767px) {
-  .Point__featureListItem:nth-of-type(3n-3)::before {
-  }
-}
-/* タブレットのみ */
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
-  .Point__featureListItem:nth-of-type(3n-3)::before {
-  }
-}
-/* PCのみ */
-@media only screen and (min-width: 1101px) {
-  .Point__featureListItem:nth-of-type(3n-3)::before {
-  }
-}
-
-/* 共通 */
 .Point__featureListItem:nth-of-type(3n-2)::before {
-  content: "02";
+  content: "01";
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
@@ -3652,7 +3704,7 @@ figure {
 
 /* 共通 */
 .Point__featureListItem:nth-of-type(3n-1)::before {
-  content: "03";
+  content: "02";
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
@@ -3671,6 +3723,26 @@ figure {
 }
 
 /* 共通 */
+.Point__featureListItem:nth-of-type(3n)::before {
+  content: "03";
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Point__featureListItem:nth-of-type(3n)::before {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Point__featureListItem:nth-of-type(3n)::before {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Point__featureListItem:nth-of-type(3n)::before {
+  }
+}
+
+/* 共通 */
 .Point__featureListItem + .Point__featureListItem {
 }
 /* スマホのみ */
@@ -3682,13 +3754,11 @@ figure {
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .Point__featureListItem + .Point__featureListItem {
-    margin-top: 24px;
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .Point__featureListItem + .Point__featureListItem {
-    margin-top: 24px;
   }
 }
 

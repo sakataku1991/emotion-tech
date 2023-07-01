@@ -45,9 +45,11 @@ $(function() {
 		// スライダーの下のページャー
 		dots: true,
 		// スライダーのループ
-		infinite: true,
-		// 一度にスクロールする画像の枚数
+		infinite: false,
+		// 一度にスクロールするスライドの枚数
 		slidesToScroll: 1,
+		// 一度に表示するスライドの枚数
+		slidesToShow: 1,
 		// スクロールの速度
 		speed: 264,
 		// スライダーアイテムの横幅をcssで制御
