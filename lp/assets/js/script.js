@@ -4,13 +4,13 @@ $(function() {
 	$('#js_GNav__buttonHamburger').on('click', function () {
 		$(this).toggleClass('is-open');
 		$(this).toggleClass('is-close');
-		if (state == false) {
-			$('body').css('overflow', 'hidden');
-			state = true;
-		} else {
-			$('body').css('overflow', 'auto');
-			state = false;
-		}
+		// if (state == false) {
+		// 	$('body').css('overflow', 'hidden');
+		// 	state = true;
+		// } else {
+		// 	$('body').css('overflow', 'auto');
+		// 	state = false;
+		// }
 	});
 });
 

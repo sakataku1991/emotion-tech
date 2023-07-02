@@ -10,6 +10,8 @@ License URL:    http://www.gnu.org/licenses/gpl.html
 
 /* ----------▼▼ css-custom-properties ▼▼---------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
 :root {
   /* color */
   --c-primary: #5b54e7;
@@ -64,7 +66,7 @@ License URL:    http://www.gnu.org/licenses/gpl.html
   --br-flex: 9999px;
 
   /* font-family */
-  --ff-base: -apple-system,"BlinkMacSystemFont","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif,"Segoe UI Emoji";
+  --ff-base: "Noto Sans JP",sans-serif,-apple-system,"BlinkMacSystemFont","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif,"Segoe UI Emoji";
 
   /* font-weight */
   --fw-normal: 400;
@@ -1753,7 +1755,7 @@ figure {
   .Support__companyListItem {
     border-radius: 10px;
     height: 100%;
-    width: calc(calc(100% - calc(12px * 3)) / 4);
+    width: calc(calc(100% - calc(12px * 2)) / 3);
   }
 }
 /* タブレットのみ */
@@ -5876,20 +5878,25 @@ figure {
 
 /* 共通 */
 .Download__title {
+  color: var(--c-primary);
+  font-weight: var(--fw-bold);
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .Download__title {
+    font-size: var(--fs-m);
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .Download__title {
+    font-size: 30px;
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .Download__title {
+    font-size: 30px;
   }
 }
 
