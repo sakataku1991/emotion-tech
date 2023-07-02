@@ -208,7 +208,9 @@ textarea:focus::-moz-placeholder {
 
 html {
   font-display: swap;
+  overflow-x: hidden;
   scroll-behavior: smooth;
+  width: 100vw;
 }
 
 html {
@@ -1008,29 +1010,32 @@ figure {
 .GNav__content {
   background-color: var(--c-white);
   opacity: 0;
-  position: absolute;
+  position: fixed;
   transition: opacity .4s ease, visibility .4s ease;
   visibility: hidden;
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .GNav__content {
-    right: 0;
+    left: 0;
     top: 48px;
+    width: 100vw;
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .GNav__content {
-    right: 0;
+    left: 0;
     top: 64px;
+    width: 100vw;
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .GNav__content {
-    right: 0;
+    left: 0;
     top: 64px;
+    width: 100vw;
   }
 }
 
@@ -1052,6 +1057,58 @@ figure {
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .GNav__buttonHamburger.is-open + .GNav__content {
+  }
+}
+
+/* 共通 */
+.GNav__menuMainList {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__menuMainList {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__menuMainList {
+    display: flex;
+    justify-content: end;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__menuMainList {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+/* 共通 */
+.GNav__menuMainLink {
+  font-weight: var(--fw-bold);
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__menuMainLink {
+    font-size: 30px;
+    letter-spacing: var(--ls-xxxl);
+    padding: 24px 20px 24px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__menuMainLink {
+    font-size: 15px;
+    letter-spacing: var(--ls-xxl);
+    padding: 24px 32px 24px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__menuMainLink {
+    font-size: 15px;
+    letter-spacing: var(--ls-xxl);
+    padding: 24px 32px 24px;
   }
 }
 /* ----------▲▲ GNav ▲▲---------- */
@@ -6675,6 +6732,28 @@ figure {
 }
 
 /* 共通 */
+.form-list-item-set .form-list-item + .form-list-item {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item-set .form-list-item + .form-list-item {
+    margin-top: 0;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item-set .form-list-item + .form-list-item {
+    margin-top: 0;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item-set .form-list-item + .form-list-item {
+    margin-top: 0;
+  }
+}
+
+/* 共通 */
 .form-list-item > .form-list-item-title + .form-list-item-data {
 }
 /* スマホのみ */
@@ -7558,17 +7637,19 @@ figure {
 
 /* 共通 */
 .Footer__buttonUp {
+  position: fixed;
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .Footer__buttonUp {
+    bottom: 24px;
+    right: 20px;
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .Footer__buttonUp {
     bottom: 22px;
-    position: fixed;
     right: 40px;
   }
 }
@@ -7576,7 +7657,6 @@ figure {
 @media only screen and (min-width: 1101px) {
   .Footer__buttonUp {
     bottom: 22px;
-    position: fixed;
     right: 40px;
   }
 }
