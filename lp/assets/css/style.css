@@ -28,12 +28,6 @@ License URL:    http://www.gnu.org/licenses/gpl.html
   --c-white-rgb: 255, 255, 255;
   --c-ghost: rgba(0, 0, 0, 0);
 
-  /* shame */
-  --c-navy: #2e577b;
-  --c-sky-blue: #cddce8;
-  --c-orange: #e85d3f;
-  --c-pink: #f08c8c;
-
   --c-gray-gray01: #f8f8f8;
   --c-gray-gray02: #f1f2f2;
   --c-gray-gray03: #e6e6e6;
@@ -44,6 +38,8 @@ License URL:    http://www.gnu.org/licenses/gpl.html
   --c-status-warning: #fab222;
   --c-status-error: #f4212e;
   --c-error-darker: #b81923;
+  --c-status-req: #e14a4a;
+  --c-status-any: #888888;
   --c-status-error-bg: #fee9eb;
   --c-shadow-black-8pct: rgba(#000000, 0.08);
   --c-shadow-black-12pct: rgba(#000000, 0.12);
@@ -53,6 +49,8 @@ License URL:    http://www.gnu.org/licenses/gpl.html
   --c-shadow-black-32pct: rgba(#000000, 0.32);
   --c-shadow-black-40pct: rgba(#000000, 0.40);
   --c-shadow-primary-08pct: rgba(#00ac9a, 0.08);
+
+  --c-placeholder: #bbbbbb;
 
   /* border-radius */
   --br-xs: 3px;
@@ -70,7 +68,7 @@ License URL:    http://www.gnu.org/licenses/gpl.html
 
   /* font-weight */
   --fw-normal: 400;
-  --fw-medium: 600;
+  --fw-medium: 500;
   --fw-bold: 700;
 
   /* font-size */
@@ -148,10 +146,46 @@ img {
   object-fit: cover;
 }
 
-.bg-section {
+/* placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: var(--c-placeholder) !important;
 }
-.bg-section.-skyBlue {
-  background-color: var(--c-sky-blue);
+input::placeholder-shown,
+textarea::placeholder-shown {
+  color: var(--c-placeholder) !important;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: var(--c-placeholder) !important;
+}
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+  color: var(--c-placeholder) !important;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: var(--c-ghost) !important;
+  transition: color .1s;
+}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: var(--c-ghost) !important;
+  transition: color .1s;
+}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  color: var(--c-ghost) !important;
+  transition: color .1s;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: var(--c-ghost) !important;
+  transition: color .1s;
+}
+
+.bg-section {
 }
 .bg-section.-lightGray {
   background-color: var(--c-gray-gray02);
@@ -4220,6 +4254,7 @@ figure {
 /* 共通 */
 .Point__featureList:has(.slick-slide:first-of-type.slick-current) .slick-prev {
   opacity: 0;
+  pointer-events: none;
   visibility: hidden;
 }
 /* スマホのみ */
@@ -4241,6 +4276,7 @@ figure {
 /* 共通 */
 .Point__featureList:has(.slick-slide:last-of-type.slick-current) .slick-next {
   opacity: 0;
+  pointer-events: none;
   visibility: hidden;
 }
 /* スマホのみ */
@@ -6444,6 +6480,44 @@ figure {
 }
 
 /* 共通 */
+.Download__titleTag {
+  display: inline-block;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Download__titleTag {
+    border-radius: var(--br-s);
+    border: 3px solid var(--c-primary);
+    font-size: var(--fs-s);
+    margin-left: 8px;
+    padding: 0px 10px 1px;
+    vertical-align: 2px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Download__titleTag {
+    border-radius: var(--br-s);
+    border: 3px solid var(--c-primary);
+    font-size: 23px;
+    margin-left: 12px;
+    padding: 0px 10px 1px;
+    vertical-align: 2px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Download__titleTag {
+    border-radius: var(--br-s);
+    border: 3px solid var(--c-primary);
+    font-size: 23px;
+    margin-left: 12px;
+    padding: 0px 10px 1px;
+    vertical-align: 2px;
+  }
+}
+
+/* 共通 */
 .Download__title + .Download__text {
 }
 /* スマホのみ */
@@ -6485,6 +6559,28 @@ figure {
 }
 
 /* 共通 */
+.Download__info + .Download__formAndDocument {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Download__info + .Download__formAndDocument {
+    margin-top: 24px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Download__info + .Download__formAndDocument {
+    margin-top: 40px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Download__info + .Download__formAndDocument {
+    margin-top: 40px;
+  }
+}
+
+/* 共通 */
 .Download__formAndDocument {
 }
 /* スマホのみ */
@@ -6518,13 +6614,539 @@ figure {
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .Download__form {
+    min-width: 330px;
     width: 40%;
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .Download__form {
+    min-width: 330px;
     width: 40%;
+  }
+}
+
+/* 共通 */
+.form-list-item + .form-list-item {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item + .form-list-item {
+    margin-top: 22px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item + .form-list-item {
+    margin-top: 18px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item + .form-list-item {
+    margin-top: 18px;
+  }
+}
+
+/* 共通 */
+.form-list-item + .form-list-item-set,
+.form-list-item-set + .form-list-item {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item + .form-list-item-set,
+  .form-list-item-set + .form-list-item {
+    margin-top: 22px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item + .form-list-item-set,
+  .form-list-item-set + .form-list-item {
+    margin-top: 18px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item + .form-list-item-set,
+  .form-list-item-set + .form-list-item {
+    margin-top: 18px;
+  }
+}
+
+/* 共通 */
+.form-list-item > .form-list-item-title + .form-list-item-data {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item > .form-list-item-title + .form-list-item-data {
+    margin-top: 4px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item > .form-list-item-title + .form-list-item-data {
+    margin-top: 8px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item > .form-list-item-title + .form-list-item-data {
+    margin-top: 8px;
+  }
+}
+
+/* 共通 */
+.form-mail .form-section.-privacyPolicy {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-mail .form-section.-privacyPolicy {
+    margin-top: 30px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-mail .form-section.-privacyPolicy {
+    margin-top: 30px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-mail .form-section.-privacyPolicy {
+    margin-top: 30px;
+  }
+}
+
+/* 共通 */
+.form-mail .form-section.-submit {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-mail .form-section.-submit {
+    margin-top: 40px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-mail .form-section.-submit {
+    margin-top: 64px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-mail .form-section.-submit {
+    margin-top: 64px;
+  }
+}
+
+/* 共通 */
+.form-list-item-title {
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item-title {
+    font-size: var(--fs-xs);
+    letter-spacing: var(--ls-xxl);
+    line-height: var(--lh-m);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item-title {
+    font-size: var(--fs-xs);
+    letter-spacing: var(--ls-xxl);
+    line-height: var(--lh-m);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item-title {
+    font-size: var(--fs-xs);
+    letter-spacing: var(--ls-xxl);
+    line-height: var(--lh-m);
+  }
+}
+
+/* 共通 */
+.form-list-item-title-label {
+  white-space: nowrap;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item-title-label {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item-title-label {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item-title-label {
+  }
+}
+
+/* 共通 */
+.form-list-item.-req > .form-list-item-title > .form-list-item-title-label,
+.form-list-item.-any > .form-list-item-title > .form-list-item-title-label {
+  align-items: center;
+  display: flex;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item.-req > .form-list-item-title > .form-list-item-title-label,
+.form-list-item.-any > .form-list-item-title > .form-list-item-title-label {
+    gap: 12px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item.-req > .form-list-item-title > .form-list-item-title-label,
+.form-list-item.-any > .form-list-item-title > .form-list-item-title-label {
+    gap: 12px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item.-req > .form-list-item-title > .form-list-item-title-label,
+.form-list-item.-any > .form-list-item-title > .form-list-item-title-label {
+    gap: 12px;
+  }
+}
+
+/* 共通 */
+.form-list-item.-req > .form-list-item-title > .form-list-item-title-label::after,
+  .form-list-item.-any > .form-list-item-title > .form-list-item-title-label::after {
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item.-req > .form-list-item-title > .form-list-item-title-label::after,
+  .form-list-item.-any > .form-list-item-title > .form-list-item-title-label::after {
+    border-radius: 3px;
+    font-size: var(--fs-xxs);
+    letter-spacing: var(--ls-xl);
+    line-height: var(--lh-xs);
+    padding: 3px 4px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item.-req > .form-list-item-title > .form-list-item-title-label::after,
+  .form-list-item.-any > .form-list-item-title > .form-list-item-title-label::after {
+    border-radius: 3px;
+    font-size: var(--fs-xxs);
+    letter-spacing: var(--ls-xl);
+    line-height: var(--lh-xs);
+    padding: 3px 4px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item.-req > .form-list-item-title > .form-list-item-title-label::after,
+  .form-list-item.-any > .form-list-item-title > .form-list-item-title-label::after {
+    border-radius: 3px;
+    font-size: var(--fs-xxs);
+    letter-spacing: var(--ls-xl);
+    line-height: var(--lh-xs);
+    padding: 3px 4px;
+  }
+}
+
+/* 共通 */
+.form-list-item.-req > .form-list-item-title > .form-list-item-title-label::after {
+  background-color: var(--c-status-req);
+  color: var(--c-white);
+  content: "必須";
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item.-req > .form-list-item-title > .form-list-item-title-label::after {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item.-req > .form-list-item-title > .form-list-item-title-label::after {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item.-req > .form-list-item-title > .form-list-item-title-label::after {
+  }
+}
+
+/* 共通 */
+  .form-list-item.-any > .form-list-item-title > .form-list-item-title-label::after {
+  background-color: var(--c-status-any);
+  color: var(--c-white);
+  content: "任意";
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item.-any > .form-list-item-title > .form-list-item-title-label::after {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item.-any > .form-list-item-title > .form-list-item-title-label::after {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item.-any > .form-list-item-title > .form-list-item-title-label::after {
+  }
+}
+
+/* 共通 */
+.form-list-item-data-content {
+  color: var(--c-black);
+  -webkit-appearance: none;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item-data-content {
+    font-size: var(--fs-m);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item-data-content {
+    font-size: var(--fs-m);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item-data-content {
+    font-size: var(--fs-m);
+  }
+}
+
+/* 共通 */
+.form-list-item-data-content.-text,
+.form-list-item-data-content.-textarea,
+.form-list-item-data-content.-radio .form-list-item-data-label-text::before,
+.form-list-item-data-content.-checkbox.-check .form-list-item-data-label-text::before,
+.form-list-item-data-content.-checkbox.-fill .form-list-item-data-label-text {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item-data-content.-text,
+.form-list-item-data-content.-textarea,
+.form-list-item-data-content.-radio .form-list-item-data-label-text::before,
+.form-list-item-data-content.-checkbox.-check .form-list-item-data-label-text::before,
+.form-list-item-data-content.-checkbox.-fill .form-list-item-data-label-text {
+    border-radius: var(--br-s);
+    border: 1px solid var(--c-white);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item-data-content.-text,
+.form-list-item-data-content.-textarea,
+.form-list-item-data-content.-radio .form-list-item-data-label-text::before,
+.form-list-item-data-content.-checkbox.-check .form-list-item-data-label-text::before,
+.form-list-item-data-content.-checkbox.-fill .form-list-item-data-label-text {
+    border-radius: var(--br-s);
+    border: 1px solid var(--c-white);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item-data-content.-text,
+.form-list-item-data-content.-textarea,
+.form-list-item-data-content.-radio .form-list-item-data-label-text::before,
+.form-list-item-data-content.-checkbox.-check .form-list-item-data-label-text::before,
+.form-list-item-data-content.-checkbox.-fill .form-list-item-data-label-text {
+    border-radius: var(--br-s);
+    border: 1px solid var(--c-white);
+  }
+}
+
+/* 共通 */
+.form-list-item-data-content.-text,
+.form-list-item-data-content.-textarea {
+  font-weight: var(--fw-medium);
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item-data-content.-text,
+.form-list-item-data-content.-textarea {
+    width: 100%;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item-data-content.-text,
+.form-list-item-data-content.-textarea {
+    width: 100%;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item-data-content.-text,
+.form-list-item-data-content.-textarea {
+    width: 100%;
+  }
+}
+
+/* 共通 */
+.form-list-item-data-content.-text {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item-data-content.-text {
+    height: 44px;
+    padding: 4px 8px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item-data-content.-text {
+    height: 44px;
+    padding: 4px 8px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item-data-content.-text {
+    height: 44px;
+    padding: 4px 8px;
+  }
+}
+
+/* 共通 */
+.form-list-item-set {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item-set {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item-set {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item-set {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+/* 共通 */
+.button-send {
+  background: linear-gradient(270deg, var(--c-secondary-gd-start) 0%, var(--c-secondary-gd-end) 100%);
+  display: block;
+  text-align: center;
+  transition: all 0.2s ease-out;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .button-send {
+    border-radius: var(--br-s);
+    line-height: var(--lh-xxs);
+    padding: 18px 12px;
+    width: 64%;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .button-send {
+    border-radius: var(--br-s);
+    line-height: var(--lh-xxs);
+    padding: 24px 22px;
+    width: 210px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .button-send {
+    border-radius: var(--br-s);
+    line-height: var(--lh-xxs);
+    padding: 24px 22px;
+    width: 210px;
+  }
+}
+
+/* 共通 */
+.button-send:active {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .button-send:active {
+    filter: brightness(110%);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .button-send:active {
+    filter: brightness(110%);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .button-send:active {
+  }
+}
+
+/* 共通 */
+.button-send:hover {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .button-send:hover {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .button-send:hover {
+    filter: brightness(110%);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .button-send:hover {
+    filter: brightness(110%);
+  }
+}
+
+/* 共通 */
+.button-text {
+  color: var(--c-white);
+  font-weight: var(--fw-bold);
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .button-text {
+    font-size: var(--fs-s);
+    letter-spacing: var(--ls-xxl);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .button-text {
+    font-size: var(--fs-s);
+    letter-spacing: var(--ls-xxl);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .button-text {
+    font-size: var(--fs-s);
+    letter-spacing: var(--ls-xxl);
   }
 }
 
