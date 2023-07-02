@@ -3,7 +3,7 @@
 CSS Name:     emotion-tech
 Description:    『株式会社エモーションテック』のLP
 Version:        1.0.0
-Last Update:    2023/04/26
+Last Update:    2023/07/02
 License:        GPL
 License URL:    http://www.gnu.org/licenses/gpl.html
 */
@@ -479,6 +479,48 @@ figure {
 }
 
 /* 共通 */
+.Header__logoLink:active {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Header__logoLink:active {
+    opacity: .7;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Header__logoLink:active {
+    opacity: .7;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Header__logoLink:active {
+  }
+}
+
+/* 共通 */
+.Header__logoLink:hover {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Header__logoLink:hover {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Header__logoLink:hover {
+    opacity: .7;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Header__logoLink:hover {
+    opacity: .7;
+  }
+}
+
+/* 共通 */
 .Header__logoImg {
 }
 /* スマホのみ */
@@ -536,6 +578,7 @@ figure {
 .Header__buttonContact {
   background: linear-gradient(270deg, var(--c-primary-gd-start) 0%, var(--c-primary-gd-end) 100%);
   display: block;
+  transition: all 0.2s ease-out;
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
@@ -559,6 +602,48 @@ figure {
     border-radius: var(--br-s);
     line-height: var(--lh-xxs);
     padding: 8px 12px;
+  }
+}
+
+/* 共通 */
+.Header__buttonContact:active {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Header__buttonContact:active {
+    filter: brightness(120%);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Header__buttonContact:active {
+    filter: brightness(120%);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Header__buttonContact:active {
+  }
+}
+
+/* 共通 */
+.Header__buttonContact:hover {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Header__buttonContact:hover {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Header__buttonContact:hover {
+    filter: brightness(120%);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Header__buttonContact:hover {
+    filter: brightness(120%);
   }
 }
 
@@ -709,6 +794,87 @@ figure {
   .GNav__buttonHamburgerIcon {
     height: 16px;
     width: 16px;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburgerIcon::before {
+  background-color: var(--c-white);
+  content: "";
+  display: block;
+  position: absolute;
+  transition: all 0.2s ease-out;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburgerIcon::before {
+    border-radius: var(--br-s);
+    height: 40px;
+    left: calc(50% - calc(40px / 2));
+    top: calc(50% - calc(40px / 2));
+    width: 40px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburgerIcon::before {
+    border-radius: var(--br-s);
+    height: 40px;
+    left: calc(50% - calc(40px / 2));
+    top: calc(50% - calc(40px / 2));
+    width: 40px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburgerIcon::before {
+    border-radius: var(--br-s);
+    height: 40px;
+    left: calc(50% - calc(40px / 2));
+    top: calc(50% - calc(40px / 2));
+    width: 40px;
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger:active .GNav__buttonHamburgerIcon::before {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger:active .GNav__buttonHamburgerIcon::before {
+    background-color: rgba(var(--c-primary-rgb), .18);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger:active .GNav__buttonHamburgerIcon::before {
+    background-color: rgba(var(--c-primary-rgb), .18);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger:active .GNav__buttonHamburgerIcon::before {
+  }
+}
+
+/* 共通 */
+.GNav__buttonHamburger:hover .GNav__buttonHamburgerIcon::before {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .GNav__buttonHamburger:hover .GNav__buttonHamburgerIcon::before {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .GNav__buttonHamburger:hover .GNav__buttonHamburgerIcon::before {
+    background-color: rgba(var(--c-primary-rgb), .18);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .GNav__buttonHamburger:hover .GNav__buttonHamburgerIcon::before {
+    background-color: rgba(var(--c-primary-rgb), .18);
   }
 }
 
@@ -1423,6 +1589,7 @@ figure {
   background: linear-gradient(270deg, var(--c-secondary-gd-start) 0%, var(--c-secondary-gd-end) 100%);
   display: block;
   text-align: center;
+  transition: all 0.2s ease-out;
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
@@ -1449,6 +1616,48 @@ figure {
     line-height: var(--lh-xxs);
     padding: 12px 22px;
     width: 210px;
+  }
+}
+
+/* 共通 */
+.MainVisual__buttonCTA:active {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .MainVisual__buttonCTA:active {
+    filter: brightness(110%);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .MainVisual__buttonCTA:active {
+    filter: brightness(110%);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .MainVisual__buttonCTA:active {
+  }
+}
+
+/* 共通 */
+.MainVisual__buttonCTA:hover {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .MainVisual__buttonCTA:hover {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .MainVisual__buttonCTA:hover {
+    filter: brightness(110%);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .MainVisual__buttonCTA:hover {
+    filter: brightness(110%);
   }
 }
 
@@ -2476,14 +2685,44 @@ figure {
 
 /* 共通 */
 .Case__buttonCTA {
-  background-color: var(--c-white);
-  display: block;
-  text-align: center;
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .Case__buttonCTA {
-    border: 4px solid #f7d1d1;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__buttonCTA {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__buttonCTA {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* 共通 */
+.Case__buttonCTALink {
+  background: linear-gradient(270deg, #f7d1d1 0%, #f7d1d1 100%);
+  background-clip: border-box;
+  background-origin: border-box;
+  display: block;
+  position: relative;
+  text-align: center;
+  transition: all .24s ease-out;
+  z-index: 0;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__buttonCTALink {
+    border: 4px solid var(--c-ghost);
     border-radius: var(--br-s);
     margin-left: auto;
     margin-right: auto;
@@ -2493,8 +2732,8 @@ figure {
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
-  .Case__buttonCTA {
-    border: 4px solid #f7d1d1;
+  .Case__buttonCTALink {
+    border: 4px solid var(--c-ghost);
     border-radius: var(--br-s);
     margin-left: auto;
     margin-right: auto;
@@ -2504,8 +2743,8 @@ figure {
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
-  .Case__buttonCTA {
-    border: 4px solid #f7d1d1;
+  .Case__buttonCTALink {
+    border: 4px solid var(--c-ghost);
     border-radius: var(--br-s);
     margin-left: auto;
     margin-right: auto;
@@ -2515,26 +2754,246 @@ figure {
 }
 
 /* 共通 */
-.Case__buttonCTAText {
-  color: var(--c-secondary);
-  font-weight: var(--fw-bold);
+.Case__buttonCTALink:active {
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
-  .Case__buttonCTAText {
+  .Case__buttonCTALink:active {
+    background: linear-gradient(270deg, var(--c-secondary-gd-start) 0%, var(--c-secondary-gd-end) 100%);
+    background-clip: border-box;
+    background-origin: border-box;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__buttonCTALink:active {
+    background: linear-gradient(270deg, var(--c-secondary-gd-start) 0%, var(--c-secondary-gd-end) 100%);
+    background-clip: border-box;
+    background-origin: border-box;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__buttonCTALink:active {
+  }
+}
+
+/* 共通 */
+.Case__buttonCTALink:hover {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__buttonCTALink:hover {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__buttonCTALink:hover {
+    background: linear-gradient(270deg, var(--c-secondary-gd-start) 0%, var(--c-secondary-gd-end) 100%);
+    background-clip: border-box;
+    background-origin: border-box;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__buttonCTALink:hover {
+    background: linear-gradient(270deg, var(--c-secondary-gd-start) 0%, var(--c-secondary-gd-end) 100%);
+    background-clip: border-box;
+    background-origin: border-box;
+  }
+}
+
+/* 共通 */
+.Case__buttonCTALink::before,
+.Case__buttonCTALink::after {
+  content: "";
+  display: block;
+  position: absolute;
+  transition: all .24s;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__buttonCTALink::before,
+.Case__buttonCTALink::after {
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  top: 0;
+  width: 100%;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__buttonCTALink::before,
+.Case__buttonCTALink::after {
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  top: 0;
+  width: 100%;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__buttonCTALink::before,
+.Case__buttonCTALink::after {
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  top: 0;
+  width: 100%;
+  }
+}
+
+/* 共通 */
+.Case__buttonCTALink::before {
+  background: linear-gradient(270deg, var(--c-white) 0%, var(--c-white) 100%);
+  transition: all .24s ease-out;
+  z-index: -1;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__buttonCTALink::before {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__buttonCTALink::before {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__buttonCTALink::before {
+  }
+}
+
+/* 共通 */
+.Case__buttonCTALink::after {
+  background: linear-gradient(270deg, var(--c-secondary-gd-start) 0%, var(--c-secondary-gd-end) 100%);
+  z-index: -2;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__buttonCTALink::after {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__buttonCTALink::after {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__buttonCTALink::after {
+  }
+}
+
+/* 共通 */
+.Case__buttonCTALink:active::before {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__buttonCTALink:active::before {
+    opacity: 0;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__buttonCTALink:active::before {
+    opacity: 0;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__buttonCTALink:active::before {
+  }
+}
+
+/* 共通 */
+.Case__buttonCTALink:hover::before {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__buttonCTALink:hover::before {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__buttonCTALink:hover::before {
+    opacity: 0;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__buttonCTALink:hover::before {
+    opacity: 0;
+  }
+}
+
+/* 共通 */
+.Case__buttonCTALinkText {
+  color: var(--c-secondary);
+  font-weight: var(--fw-bold);
+  transition: all .24s ease-out;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__buttonCTALinkText {
     font-size: var(--fs-m);
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
-  .Case__buttonCTAText {
+  .Case__buttonCTALinkText {
     font-size: var(--fs-m);
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
-  .Case__buttonCTAText {
+  .Case__buttonCTALinkText {
     font-size: var(--fs-m);
+  }
+}
+
+/* 共通 */
+.Case__buttonCTALink:active .Case__buttonCTALinkText {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__buttonCTALink:active .Case__buttonCTALinkText {
+    color: var(--c-white);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__buttonCTALink:active .Case__buttonCTALinkText {
+    color: var(--c-white);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__buttonCTALink:active .Case__buttonCTALinkText {
+  }
+}
+
+/* 共通 */
+.Case__buttonCTALink:hover .Case__buttonCTALinkText {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__buttonCTALink:hover .Case__buttonCTALinkText {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__buttonCTALink:hover .Case__buttonCTALinkText {
+    color: var(--c-white);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__buttonCTALink:hover .Case__buttonCTALinkText {
+    color: var(--c-white);
   }
 }
 /* ----------▲▲ 導入事例 ▲▲---------- */
@@ -2597,14 +3056,14 @@ figure {
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .Problem__title {
     left: 0;
-    top: -95px;
+    top: -99px;
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .Problem__title {
     left: 0;
-    top: -95px;
+    top: -99px;
   }
 }
 
@@ -3579,7 +4038,7 @@ figure {
 /* 共通 */
 .slick-arrow {
   position: relative;
-  transition: all .3s;
+  transition: all 0.2s ease-out;
   z-index: 1;
 }
 /* スマホのみ */
@@ -3609,6 +4068,7 @@ figure {
 .slick-arrow::after {
   content: "";
   display: block;
+  transition: all 0.2s ease-out;
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
@@ -3633,6 +4093,7 @@ figure {
 .slick-arrow::before {
   background-color: var(--c-white);
   border-radius: var(--br-o);
+  content: "" !important;
   height: inherit;
   opacity: 1 !important;
 }
@@ -3795,6 +4256,48 @@ figure {
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .Point__featureList:has(.slick-slide:last-of-type.slick-current) .slick-next {
+  }
+}
+
+/* 共通 */
+.slick-arrow:active::before {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .slick-arrow:active::before {
+    background-color: #e1e0fb !important;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .slick-arrow:active::before {
+    background-color: #e1e0fb !important;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .slick-arrow:active::before {
+  }
+}
+
+/* 共通 */
+.slick-arrow:hover::before {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .slick-arrow:hover::before {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .slick-arrow:hover::before {
+    background-color: #e1e0fb !important;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .slick-arrow:hover::before {
+    background-color: #e1e0fb !important;
   }
 }
 
@@ -3982,6 +4485,46 @@ figure {
 @media only screen and (min-width: 1101px) {
   .slick-dots li.slick-active button:after {
     font-size: 15px;
+  }
+}
+
+/* 共通 */
+.slick-dots li:not(.slick-active) button:active:before {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .slick-dots li:not(.slick-active) button:active:before {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .slick-dots li:not(.slick-active) button:active:before {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .slick-dots li:not(.slick-active) button:active:before {
+  }
+}
+
+/* 共通 */
+.slick-dots li:not(.slick-active) button:hover:before {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .slick-dots li:not(.slick-active) button:hover:before {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .slick-dots li:not(.slick-active) button:hover:before {
+    filter: brightness(72%);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .slick-dots li:not(.slick-active) button:hover:before {
+    filter: brightness(72%);
   }
 }
 
@@ -6163,6 +6706,48 @@ figure {
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .Footer__logoLink {
+  }
+}
+
+/* 共通 */
+.Footer__logoLink:active {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Footer__logoLink:active {
+    opacity: .7;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Footer__logoLink:active {
+    opacity: .7;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Footer__logoLink:active {
+  }
+}
+
+/* 共通 */
+.Footer__logoLink:hover {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Footer__logoLink:hover {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Footer__logoLink:hover {
+    opacity: .7;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Footer__logoLink:hover {
+    opacity: .7;
   }
 }
 
