@@ -647,13 +647,13 @@ figure {
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .Header__buttonContact:active {
-    filter: brightness(120%);
+    filter: brightness(80%);
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .Header__buttonContact:active {
-    filter: brightness(120%);
+    filter: brightness(80%);
   }
 }
 /* PCのみ */
@@ -673,13 +673,13 @@ figure {
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .Header__buttonContact:hover {
-    filter: brightness(120%);
+    filter: brightness(80%);
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .Header__buttonContact:hover {
-    filter: brightness(120%);
+    filter: brightness(80%);
   }
 }
 
@@ -1716,13 +1716,13 @@ figure {
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .MainVisual__buttonCTA:active {
-    filter: brightness(110%);
+    filter: brightness(80%);
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .MainVisual__buttonCTA:active {
-    filter: brightness(110%);
+    filter: brightness(80%);
   }
 }
 /* PCのみ */
@@ -1742,13 +1742,13 @@ figure {
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .MainVisual__buttonCTA:hover {
-    filter: brightness(110%);
+    filter: brightness(80%);
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .MainVisual__buttonCTA:hover {
-    filter: brightness(110%);
+    filter: brightness(80%);
   }
 }
 
@@ -2596,6 +2596,7 @@ figure {
 /* 共通 */
 .Case__companyCard {
   background-color: var(--c-white);
+  position: relative;
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
@@ -2612,6 +2613,42 @@ figure {
 @media only screen and (min-width: 1101px) {
   .Case__companyCard {
     height: 100%;
+  }
+}
+
+/* 共通 */
+.Case__companyCard::after {
+  background: linear-gradient(270deg, var(--c-primary-gd-start) 0%, var(--c-primary-gd-end) 100%);
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  content: "";
+  display: block;
+  position: absolute;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__companyCard::after {
+    bottom: 0;
+    height: 40px;
+    right: 0;
+    width: 40px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__companyCard::after {
+    bottom: 0;
+    height: 40px;
+    right: 0;
+    width: 40px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__companyCard::after {
+    bottom: 0;
+    height: 40px;
+    right: 0;
+    width: 40px;
   }
 }
 
@@ -2661,6 +2698,9 @@ figure {
 
 /* 共通 */
 .Case__companyInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
@@ -2680,6 +2720,25 @@ figure {
   .Case__companyInfo {
     min-height: 200px;
     padding: 20px 20px 20px;
+  }
+}
+
+/* 共通 */
+.Case__companyNameAndVoice {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__companyNameAndVoice {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__companyNameAndVoice {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__companyNameAndVoice {
   }
 }
 
@@ -2749,6 +2808,33 @@ figure {
 @media only screen and (min-width: 1101px) {
   .Case__companyVoice {
     font-size: 13px;
+  }
+}
+
+/* 共通 */
+.Case__companyAccess {
+  color: var(--c-primary-gd-end);
+  font-weight: var(--fw-bold);
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Case__companyAccess {
+    font-size: 15px;
+    letter-spacing: var(--ls-xl);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Case__companyAccess {
+    font-size: 15px;
+    letter-spacing: var(--ls-xl);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Case__companyAccess {
+    font-size: 15px;
+    letter-spacing: var(--ls-xl);
   }
 }
 
@@ -7166,13 +7252,13 @@ figure {
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .button-send:active {
-    filter: brightness(110%);
+    filter: brightness(80%);
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .button-send:active {
-    filter: brightness(110%);
+    filter: brightness(80%);
   }
 }
 /* PCのみ */
@@ -7192,13 +7278,13 @@ figure {
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .button-send:hover {
-    filter: brightness(110%);
+    filter: brightness(80%);
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .button-send:hover {
-    filter: brightness(110%);
+    filter: brightness(80%);
   }
 }
 
@@ -7318,6 +7404,7 @@ figure {
 @media only screen and (max-width: 767px) {
   .Footer {
     padding: 32px 0 40px;
+    position: relative;
   }
 }
 /* タブレットのみ */
@@ -7459,6 +7546,7 @@ figure {
 @media only screen and (max-width: 767px) {
   .Footer__logoImg {
     height: 26px;
+    margin-left: 0;
     width: 130px;
   }
 }
@@ -7522,23 +7610,26 @@ figure {
 
 /* 共通 */
 .Footer__sitemapList {
+  align-items: center;
+  display: flex;
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .Footer__sitemapList {
+    flex-wrap: wrap;
+    gap: 40px 40px;
+    padding-left: 48px;
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .Footer__sitemapList {
-    display: flex;
     gap: 40px;
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .Footer__sitemapList {
-    display: flex;
     gap: 40px;
   }
 }
@@ -7549,7 +7640,7 @@ figure {
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .Footer__sitemapListItem {
-    text-align: center;
+    width: calc(calc(100% - 48px) / 2);
   }
 }
 /* タブレットのみ */
@@ -7560,26 +7651,6 @@ figure {
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .Footer__sitemapListItem {
-  }
-}
-
-/* 共通 */
-.Footer__sitemapListItem + .Footer__sitemapListItem {
-}
-/* スマホのみ */
-@media only screen and (max-width: 767px) {
-  .Footer__sitemapListItem + .Footer__sitemapListItem {
-    margin-top: 24px;
-  }
-}
-/* タブレットのみ */
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
-  .Footer__sitemapListItem + .Footer__sitemapListItem {
-  }
-}
-/* PCのみ */
-@media only screen and (min-width: 1101px) {
-  .Footer__sitemapListItem + .Footer__sitemapListItem {
   }
 }
 
@@ -7802,6 +7873,9 @@ figure {
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .Footer__copyright {
+    bottom: 48px;
+    left: 20px;
+    position: absolute;
   }
 }
 /* タブレットのみ */
@@ -7823,6 +7897,9 @@ figure {
 
 /* 共通 */
 .Footer__copyrightText {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
 }
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
@@ -7836,9 +7913,6 @@ figure {
   .Footer__copyrightText {
     font-size: var(--fs-xxs);
     letter-spacing: var(--ls-xxl);
-    writing-mode: vertical-rl;
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: vertical-rl;
   }
 }
 /* PCのみ */
@@ -7846,9 +7920,6 @@ figure {
   .Footer__copyrightText {
     font-size: var(--fs-xxs);
     letter-spacing: var(--ls-xxl);
-    writing-mode: vertical-rl;
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: vertical-rl;
   }
 }
 /* ----------▲▲ Footer ▲▲---------- */
