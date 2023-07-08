@@ -42,3 +42,17 @@ $(function() {
   var thisYear = todayData.getFullYear();
   $('#js_Footer__copyrightText').text('©' + ' ' + thisYear + ' EmotionTech, Inc.');
 });
+
+// iframeのheadにcssを追加
+$(function(){
+  $('#frame').on('load', function(){
+      $('#frame').contents().find('head').append('<link rel="stylesheet" href="./assets/css/style.css">');
+  });
+});
+
+
+$(function(){
+  $('#test').on('load', function(){
+    $('#test').contents().find('head').append('<link rel="stylesheet" href="./assets/css/style.css">');
+  });
+});
