@@ -26,6 +26,8 @@ $(function() {
       centerMode: true,
       // スライダーの下のページャー
       dots: true,
+      // ドラッグ操作
+      draggable: true,
       // スライダーのループ
       infinite: false,
       // 「＞」ボタン
@@ -38,6 +40,8 @@ $(function() {
       slidesToShow: 1,
       // スクロールの速度
       speed: 264,
+      // スワイプ操作
+      swipe: true,
       // スライダーアイテムの横幅をcssで制御
       variableWidth: true,
     });
@@ -60,6 +64,8 @@ $(function() {
       centerMode: true,
       // スライダーの下のページャー
       dots: true,
+      // ドラッグ操作
+      draggable: true,
       // スライダーのループ
       infinite: false,
       // 一度にスクロールするスライドの枚数
@@ -68,10 +74,20 @@ $(function() {
       slidesToShow: 1,
       // スクロールの速度
       speed: 264,
+      // スワイプ操作
+      swipe: true,
       // スライダーアイテムの横幅をcssで制御
       variableWidth: true,
     });
   }
+});
+
+$('.sliderCase').bind('touchstart', function(){
+  return true;
+});
+
+$('.sliderPoint').bind('touchstart', function(){
+  return true;
 });
 
 // 「UP」ボタン
