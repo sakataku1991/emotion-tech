@@ -7509,6 +7509,8 @@ figure {
   }
 }
 
+/* -----▼ メールフォームのスタイル ▼----- */
+
 /* 共通 */
 .form-list-item + .form-list-item {
 }
@@ -7602,28 +7604,6 @@ figure {
 }
 
 /* 共通 */
-.form-mail .form-section.-privacyPolicy {
-}
-/* スマホのみ */
-@media only screen and (max-width: 767px) {
-  .form-mail .form-section.-privacyPolicy {
-    margin-top: 30px;
-  }
-}
-/* タブレットのみ */
-@media only screen and (min-width: 768px) and (max-width: 1100px) {
-  .form-mail .form-section.-privacyPolicy {
-    margin-top: 30px;
-  }
-}
-/* PCのみ */
-@media only screen and (min-width: 1101px) {
-  .form-mail .form-section.-privacyPolicy {
-    margin-top: 30px;
-  }
-}
-
-/* 共通 */
 .form-mail .form-section.-submit {
 }
 /* スマホのみ */
@@ -7635,12 +7615,34 @@ figure {
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .form-mail .form-section.-submit {
-    margin-top: 64px;
+    margin-top: 40px;
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .form-mail .form-section.-submit {
+    margin-top: 40px;
+  }
+}
+
+/* 共通 */
+.form-mail .form-section.-privacyPolicy {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-mail .form-section.-privacyPolicy {
+    margin-top: 40px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-mail .form-section.-privacyPolicy {
+    margin-top: 64px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-mail .form-section.-privacyPolicy {
     margin-top: 64px;
   }
 }
@@ -7941,12 +7943,16 @@ input.text {
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .form-list-item-set {
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
   }
 }
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .form-list-item-set {
-    align-items: center;
+    align-items: end;
     display: flex;
     justify-content: space-between;
     gap: 10px;
@@ -7955,7 +7961,7 @@ input.text {
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .form-list-item-set {
-    align-items: center;
+    align-items: end;
     display: flex;
     justify-content: space-between;
     gap: 10px;
@@ -8065,6 +8071,179 @@ input.text {
     letter-spacing: var(--ls-xxl);
   }
 }
+
+/* 共通 */
+.form-privacy-policy-text {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-privacy-policy-text {
+    font-size: var(--fs-s);
+    letter-spacing: var(--ls-xxl);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-privacy-policy-text {
+    font-size: var(--fs-s);
+    letter-spacing: var(--ls-xxl);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-privacy-policy-text {
+    font-size: var(--fs-s);
+    letter-spacing: var(--ls-xxl);
+  }
+}
+
+/* 共通 */
+.text-link {
+  color: var(--c-primary);
+  text-decoration: underline;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .text-link {
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .text-link {
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .text-link {
+  }
+}
+/* -----▲ メールフォームのスタイル ▲----- */
+
+/* -----▼ メールフォームのスタイル（Pardot用） ▼----- */
+.Download__form iframe {
+  height: 640px !important;
+}
+
+/* 共通 */
+div[id^="error_for_"] + .form-field:not(.first_name) {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  div[id^="error_for_"] + .form-field:not(.first_name) {
+    margin-top: 22px !important;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  div[id^="error_for_"] + .form-field:not(.first_name) {
+    margin-top: 18px !important;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  div[id^="error_for_"] + .form-field:not(.first_name) {
+    margin-top: 18px !important;
+  }
+}
+
+/* 共通 */
+.form-field:not(.first_name) .field-label + input {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-field:not(.first_name) .field-label + input {
+    margin-top: 4px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-field:not(.first_name) .field-label + input {
+    margin-top: 8px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-field:not(.first_name) .field-label + input {
+    margin-top: 8px;
+  }
+}
+
+/* 共通 */
+.submit {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .submit {
+    margin-top: 30px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .submit {
+    margin-top: 30px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .submit {
+    margin-top: 30px;
+  }
+}
+
+/* 共通 */
+.pardot-section__foot {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .pardot-section__foot {
+    margin-top: 40px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .pardot-section__foot {
+    margin-top: 64px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .pardot-section__foot {
+    margin-top: 64px;
+  }
+}
+
+/* TODO: Pardotのフォーム実装の続きはここから */
+
+/* 共通 */
+.form-list-item-title {
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .form-list-item-title {
+    font-size: var(--fs-xs);
+    letter-spacing: var(--ls-xxl);
+    line-height: var(--lh-m);
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .form-list-item-title {
+    font-size: var(--fs-xs);
+    letter-spacing: var(--ls-xxl);
+    line-height: var(--lh-m);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .form-list-item-title {
+    font-size: var(--fs-xs);
+    letter-spacing: var(--ls-xxl);
+    line-height: var(--lh-m);
+  }
+}
+/* -----▲ メールフォームのスタイル（Pardot用） ▲----- */
 
 /* 共通 */
 .Download__document {
