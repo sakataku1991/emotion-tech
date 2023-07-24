@@ -2828,6 +2828,7 @@ figure {
 
 /* 共通 */
 .Case .slick-dots {
+  height: fit-content;
   text-align: right !important;
 }
 /* スマホのみ */
@@ -5227,6 +5228,7 @@ figure {
 
 /* 共通 */
 .Point .slick-dots {
+  height: fit-content;
   text-align: right !important;
 }
 /* スマホのみ */
