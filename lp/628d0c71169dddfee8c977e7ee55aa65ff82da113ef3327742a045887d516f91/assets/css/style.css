@@ -7639,13 +7639,13 @@ figure {
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .form-mail .form-section.-privacyPolicy {
-    margin-top: 64px;
+    margin-top: 56px;
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .form-mail .form-section.-privacyPolicy {
-    margin-top: 64px;
+    margin-top: 56px;
   }
 }
 
@@ -8087,14 +8087,14 @@ input.text {
 /* タブレットのみ */
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .form-privacy-policy-text {
-    font-size: var(--fs-s);
+    font-size: var(--fs-xs);
     letter-spacing: var(--ls-xxl);
   }
 }
 /* PCのみ */
 @media only screen and (min-width: 1101px) {
   .form-privacy-policy-text {
-    font-size: var(--fs-s);
+    font-size: var(--fs-xs);
     letter-spacing: var(--ls-xxl);
   }
 }
@@ -8620,6 +8620,57 @@ div[id^="error_for_"] + .form-field:not(.first_name) {
 }
 
 /* 共通 */
+.Footer__sitemap + .Footer__trademark {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Footer__sitemap + .Footer__trademark {
+    margin-top: 40px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Footer__sitemap + .Footer__trademark {
+    margin-top: 40px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Footer__sitemap + .Footer__trademark {
+    margin-top: 40px;
+  }
+}
+
+/* 共通 */
+.Footer__trademark {
+  color: var(--c-gray-gray07);
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Footer__trademark {
+    font-size: var(--fs-xxs);
+    padding-left: 32px;
+    padding-right: 64px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Footer__trademark {
+    font-size: var(--fs-xxs);
+    padding-left: 4px;
+    padding-right: 120px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Footer__trademark {
+    font-size: var(--fs-xxs);
+    padding-left: 4px;
+    padding-right: 120px;
+  }
+}
+
+/* 共通 */
 .Footer__buttonUp {
   opacity: 0;
   pointer-events: none;
@@ -8856,7 +8907,7 @@ div[id^="error_for_"] + .form-field:not(.first_name) {
 /* スマホのみ */
 @media only screen and (max-width: 767px) {
   .Footer__copyright {
-    bottom: 48px;
+    bottom: 38px;
     left: 20px;
     position: absolute;
   }
