@@ -276,6 +276,7 @@ figure {
 /* ----------▼▼ utility ▼▼---------- */
 /* 共通 */
 .-violetText {
+  background-clip: text;
   background: linear-gradient(270deg, var(--c-primary-gd-start) 0%, var(--c-primary-gd-end) 100%);
   color: var(--c-ghost);
   display: inline-block;
@@ -2713,6 +2714,58 @@ figure {
     font-size: var(--fs-s);
     letter-spacing: var(--ls-xl);
     line-height: var(--lh-xl);
+  }
+}
+
+/* 共通 */
+.Value__serviceText + .Value__serviceTextNote {
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Value__serviceText + .Value__serviceTextNote {
+    margin-top: 8px;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Value__serviceText + .Value__serviceTextNote {
+    margin-top: 12px;
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Value__serviceText + .Value__serviceTextNote {
+    margin-top: 12px;
+  }
+}
+
+/* 共通 */
+.Value__serviceTextNote {
+  color: var(--c-gray-gray07);
+}
+/* スマホのみ */
+@media only screen and (max-width: 767px) {
+  .Value__serviceTextNote {
+    font-size: var(--fs-xxs);
+    letter-spacing: var(--ls-xl);
+    line-height: var(--lh-m);
+    text-align: center;
+  }
+}
+/* タブレットのみ */
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .Value__serviceTextNote {
+    font-size: var(--fs-xxs);
+    letter-spacing: var(--ls-xl);
+    line-height: var(--lh-m);
+  }
+}
+/* PCのみ */
+@media only screen and (min-width: 1101px) {
+  .Value__serviceTextNote {
+    font-size: var(--fs-xxs);
+    letter-spacing: var(--ls-xl);
+    line-height: var(--lh-m);
   }
 }
 /* ----------▲▲ 提供価値 ▲▲---------- */
@@ -7813,6 +7866,7 @@ figure {
 
 /* 共通 */
 .form-list-item-data-content {
+  appearance: none;
   color: var(--c-black);
   -webkit-appearance: none;
 }
